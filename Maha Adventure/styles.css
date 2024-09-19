@@ -1,0 +1,661 @@
+/* Basic Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background: #000;
+}
+
+p,h1,h2
+{
+    cursor: default;
+}
+
+/* Header Styling */
+header {
+    scroll-behavior: smooth;
+    background: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+/* Hero Section */
+.hero {
+    background: url(banner.JPG) no-repeat center center/cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.hero:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    align-items: baseline;
+    background: #ff0000;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+
+    background: #000000;
+    transition: transform 0.5s, background 0.3s, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.596);
+    transform: translateY(-3px);
+}
+
+/* About Us Section */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background: #111;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    color: #ff0000;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Upcoming Events Section */
+.upcoming-events {
+    padding: 50px 20px;
+    background: #222;
+}
+
+.upcoming-events btn
+{
+    padding: 100px;
+    margin-top: 70%;
+}
+
+.upcoming-events h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    color: #ff0000;
+}
+
+.event-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.event-card {    
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 40%;
+    height: 200px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    background-color: #861010;
+    transition: transform 0.5s, background-color 0.5s, box-shadow 0.3s ease;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgb(0, 0, 0);
+}
+
+.event-card h3 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.event-card .btn
+{
+    margin-bottom: 2%;
+}
+
+.testimonials {
+    background: #111;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    color: #ff0000;
+}
+
+.testimonial {
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.testimonial p {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.testimonial h4 {
+    font-style: italic;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff0000;
+}
+
+/* Advanced CSS for responsiveness */
+@media (max-width: 768px) {
+    .event-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Yearly Calendar Styles */
+.yearly-calendar {
+    padding: 40px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    background: #333;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    box-sizing:  content-box;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.yearly-calendar h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for each day of the week */
+    gap: 10px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.day-label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.calendar-day {
+    width: 50px;
+    height: 50px;
+    background-color: #ff0000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.699);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.5s, background-color 0.4s;
+    position: relative;
+}
+
+.calendar-day:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+    z-index: 9;
+}
+
+.calendar-day:hover::after {
+    content: attr(data-event);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.calendar-day span {
+    pointer-events: none; /* To avoid blocking the hover effect on the text */
+}
+
+/* Empty slots for days with no events */
+.calendar-grid div {
+    width: 50px;
+    height: 50px;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 600px) {
+    .calendar-day {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .calendar-day:hover::after {
+        font-size: 12px;
+    }
+}
+
+
+
+header {
+    background-color: #e53935;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.search-filter {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.search-filter input, .search-filter select {
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    max-width: 250px;
+}
+
+.trek-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #000000;
+    color: #333;
+}
+
+.trek-card {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.26);
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.trek-card:hover {
+    background-color: #861010;
+    transition: transform 0.5s, background-color 0.5s, box-shadow 0.3s ease;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.596);}
+
+.trek-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    color: #e53935;
+}
+
+.trek-card p {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: white;
+}
+
+.trek-card .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trek-card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.trek-card button.view-more {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #e53935;
+}
+
+.trek-card button.book-now {
+    background-color: #e53935;
+    color: white;
+}
+
+.load-more-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.load-more-btn:hover {
+    background-color: #c62828;
+}
+
+/* Body and Theme Colors */
+
+nav.hidden {
+
+    transform: translateY(-100%); /* Or opacity: 0; to fade out */
+
+}
+
+header {
+    background-color: #e53935;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    
+}
+
+header h1 {
+    margin: 0;
+    font-size: 48px;
+    letter-spacing: 2px;
+    animation: slide-in 1.2s ease-out;
+}
+
+/* Search Filter Styling */
+.search-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #e53935, #b71c1c);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-filter input,
+.search-filter select {
+    padding: 12px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search-filter input:hover,
+.search-filter select:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Trek Container Grid Layout */
+.trek-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background-color: #000000;
+}
+
+/* Trek Card Design */
+.trek-card {
+    background: #222;
+    border-radius: 15px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.trek-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(145deg, #b71c1c, #e53935);
+}
+
+.trek-card h2 {
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #e53935;
+    padding-bottom: 10px;
+}
+
+.trek-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.trek-card .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Buttons with Advanced CSS */
+.trek-card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.trek-card button.view-more {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.trek-card button.view-more:hover {
+    background-color: #fff;
+    color: #e53935;
+    transform: translateY(-5px);
+}
+
+.trek-card button.book-now {
+    background-color: #e53935;
+    color: white;
+}
+
+.trek-card button.book-now:hover {
+    background-color: #b71c1c;
+    transform: scale(1.1);
+}
+
+/* Load More Button */
+.load-more-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background-color: #b71c1c;
+    transform: translateY(-5px);
+}
+
+/* Keyframe Animation for Slide-in Effect */
+@keyframes slide-in {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Scrollbar Customization */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #e53935;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    .search-filter {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .search-filter input, .search-filter select {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .trek-container {
+        grid-template-columns: 1fr;
+    }
+
+    .load-more-btn {
+        width: 100%;
+    }
+}
+
+

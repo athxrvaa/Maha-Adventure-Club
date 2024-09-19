@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Treks - Maha Adventure Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Past Treks</h1>
+        <div class="search-filter">
+            <input type="text" id="search" placeholder="Search past treks..." oninput="filterTreks()">
+        </div>
+    </header>
+
+    <section class="trek-list">
+        <div id="trek-container" class="trek-container">
+            <!-- Dynamically loaded trek cards will go here -->
+        </div>
+        <button id="load-more-btn" class="load-more-btn" onclick="loadMoreTreks()">Load More</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
